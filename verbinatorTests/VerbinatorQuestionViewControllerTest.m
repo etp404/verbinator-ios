@@ -19,9 +19,8 @@
     NSString *questionString = @"some question";
     VerbinatorQuestion *question = [[VerbinatorQuestion alloc] initWithString:questionString];
     
-    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-   VerbinatorQuestionViewController *questionViewController = [sb instantiateViewControllerWithIdentifier:@"verbinatorquestionviewcontroller"];
+    VerbinatorQuestionViewController *questionViewController = [[VerbinatorQuestionViewController alloc]  init];
 
     [questionViewController view];
     [questionViewController setQuestion: question];
