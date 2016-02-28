@@ -13,8 +13,12 @@
 		C9E915BA1C830C8900FAECB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E915B81C830C8900FAECB1 /* Main.storyboard */; };
 		C9E915BC1C830C8900FAECB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E915BB1C830C8900FAECB1 /* Assets.xcassets */; };
 		C9E915BF1C830C8900FAECB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E915BD1C830C8900FAECB1 /* LaunchScreen.storyboard */; };
-		C9E915CA1C830C8900FAECB1 /* verbinatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915C91C830C8900FAECB1 /* verbinatorTests.m */; };
 		C9E915D51C830C8A00FAECB1 /* verbinatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915D41C830C8A00FAECB1 /* verbinatorUITests.m */; };
+		C9E915E31C830C9F00FAECB1 /* QuestionViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915E21C830C9F00FAECB1 /* QuestionViewModelTest.m */; };
+		C9E915E61C830CD200FAECB1 /* FakeQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915E51C830CD200FAECB1 /* FakeQuestionView.m */; };
+		C9E915E91C830D2500FAECB1 /* VerbinatorQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915E81C830D2500FAECB1 /* VerbinatorQuestion.m */; };
+		C9E915EC1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915EB1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m */; };
+		C9E915F11C83122900FAECB1 /* FakeQuestionGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915F01C83122900FAECB1 /* FakeQuestionGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +50,21 @@
 		C9E915BE1C830C8900FAECB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9E915C01C830C8900FAECB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9E915C51C830C8900FAECB1 /* verbinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = verbinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9E915C91C830C8900FAECB1 /* verbinatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = verbinatorTests.m; sourceTree = "<group>"; };
 		C9E915CB1C830C8900FAECB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9E915D01C830C8A00FAECB1 /* verbinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = verbinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E915D41C830C8A00FAECB1 /* verbinatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = verbinatorUITests.m; sourceTree = "<group>"; };
 		C9E915D61C830C8A00FAECB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E915E21C830C9F00FAECB1 /* QuestionViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewModelTest.m; sourceTree = "<group>"; };
+		C9E915E41C830CD200FAECB1 /* FakeQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeQuestionView.h; sourceTree = "<group>"; };
+		C9E915E51C830CD200FAECB1 /* FakeQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeQuestionView.m; sourceTree = "<group>"; };
+		C9E915E71C830D2500FAECB1 /* VerbinatorQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorQuestion.h; sourceTree = "<group>"; };
+		C9E915E81C830D2500FAECB1 /* VerbinatorQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorQuestion.m; sourceTree = "<group>"; };
+		C9E915EA1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorQuestionViewModel.h; sourceTree = "<group>"; };
+		C9E915EB1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorQuestionViewModel.m; sourceTree = "<group>"; };
+		C9E915ED1C830FB100FAECB1 /* VerbinatorQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorQuestionView.h; sourceTree = "<group>"; };
+		C9E915EE1C83115400FAECB1 /* VerbinatorQuestionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorQuestionGenerator.h; sourceTree = "<group>"; };
+		C9E915EF1C83122900FAECB1 /* FakeQuestionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeQuestionGenerator.h; sourceTree = "<group>"; };
+		C9E915F01C83122900FAECB1 /* FakeQuestionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeQuestionGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +124,12 @@
 				C9E915BD1C830C8900FAECB1 /* LaunchScreen.storyboard */,
 				C9E915C01C830C8900FAECB1 /* Info.plist */,
 				C9E915AF1C830C8900FAECB1 /* Supporting Files */,
+				C9E915E71C830D2500FAECB1 /* VerbinatorQuestion.h */,
+				C9E915E81C830D2500FAECB1 /* VerbinatorQuestion.m */,
+				C9E915EA1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.h */,
+				C9E915EB1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m */,
+				C9E915ED1C830FB100FAECB1 /* VerbinatorQuestionView.h */,
+				C9E915EE1C83115400FAECB1 /* VerbinatorQuestionGenerator.h */,
 			);
 			path = verbinator;
 			sourceTree = "<group>";
@@ -125,8 +145,12 @@
 		C9E915C81C830C8900FAECB1 /* verbinatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				C9E915C91C830C8900FAECB1 /* verbinatorTests.m */,
 				C9E915CB1C830C8900FAECB1 /* Info.plist */,
+				C9E915E21C830C9F00FAECB1 /* QuestionViewModelTest.m */,
+				C9E915E41C830CD200FAECB1 /* FakeQuestionView.h */,
+				C9E915E51C830CD200FAECB1 /* FakeQuestionView.m */,
+				C9E915EF1C83122900FAECB1 /* FakeQuestionGenerator.h */,
+				C9E915F01C83122900FAECB1 /* FakeQuestionGenerator.m */,
 			);
 			path = verbinatorTests;
 			sourceTree = "<group>";
@@ -271,8 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E915B71C830C8900FAECB1 /* ViewController.m in Sources */,
+				C9E915EC1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m in Sources */,
 				C9E915B41C830C8900FAECB1 /* AppDelegate.m in Sources */,
 				C9E915B11C830C8900FAECB1 /* main.m in Sources */,
+				C9E915E91C830D2500FAECB1 /* VerbinatorQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E915CA1C830C8900FAECB1 /* verbinatorTests.m in Sources */,
+				C9E915E61C830CD200FAECB1 /* FakeQuestionView.m in Sources */,
+				C9E915E31C830C9F00FAECB1 /* QuestionViewModelTest.m in Sources */,
+				C9E915F11C83122900FAECB1 /* FakeQuestionGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
