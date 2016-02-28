@@ -7,7 +7,16 @@
 //
 
 #import "VerbinatorQuestion.h"
+@interface VerbinatorQuestion()
+@property NSString *questionString;
+@end
 
 @implementation VerbinatorQuestion
-
+-(instancetype) initWithString:(NSString *)questionString{
+    self = [super init];
+    if (self) {
+        self.questionString = questionString;
+    }
+    return self;
+}
 @end

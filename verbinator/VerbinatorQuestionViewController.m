@@ -6,22 +6,26 @@
 //  Copyright © 2016 Matthew Mould. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "VerbinatorQuestionViewController.h"
 
-@interface ViewController ()
-
+@interface VerbinatorQuestionViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *questionElement;
 @end
 
-@implementation ViewController
+@implementation VerbinatorQuestionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setQuestion:(VerbinatorQuestion *)question {
+    [self.questionElement setText:question.questionString];
 }
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VerbinatorQuestionView.h"
 
-@interface ViewController : UIViewController
+@interface VerbinatorQuestionViewController : UIViewController<VerbinatorQuestionView>
 
 
 @end

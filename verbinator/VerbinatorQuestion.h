@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface VerbinatorQuestion : NSObject
-
+@property (readonly) NSString *questionString;
+-(instancetype) initWithString:(NSString *)questionAsString;
 @end
