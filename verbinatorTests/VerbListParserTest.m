@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "VerbListProvider.h"
+#import "VerbListParser.h"
 
 @interface VerbListParserTest : XCTestCase
 
@@ -20,7 +20,7 @@
 
     NSString *verbFilePath =
     [NSString stringWithFormat:@"%@/%@", [bundle bundlePath], @"test_verb_list.csv"];
-    VerbListProvider *verbListProvider = [[VerbListProvider alloc] initWithFilePath:verbFilePath];
+    VerbListParser *verbListProvider = [[VerbListParser alloc] initWithFilePath:verbFilePath];
     NSArray *verbs = [verbListProvider verbs];
     XCTAssertEqual(2, [verbs count]);
     

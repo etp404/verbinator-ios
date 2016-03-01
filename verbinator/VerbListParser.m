@@ -6,12 +6,12 @@
 //  Copyright © 2016 Matthew Mould. All rights reserved.
 //
 
-#import "VerbListProvider.h"
-@interface VerbListProvider()
+#import "VerbListParser.h"
+@interface VerbListParser()
 @property (nonatomic, strong) NSString* filePath;
 @end
 
-@implementation VerbListProvider
+@implementation VerbListParser
 -(instancetype)initWithFilePath:(NSString*)filePath
 {
     self = [super init];

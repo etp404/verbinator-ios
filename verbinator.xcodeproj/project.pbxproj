@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C9847A101C8626840028303A /* VerbListParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A0F1C8626840028303A /* VerbListParserTest.m */; };
 		C9847A121C8628200028303A /* verb_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = C9847A111C8628200028303A /* verb_list.csv */; };
-		C9847A151C862A4B0028303A /* VerbListProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A141C862A4B0028303A /* VerbListProvider.m */; };
+		C9847A151C862A4B0028303A /* VerbListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A141C862A4B0028303A /* VerbListParser.m */; };
 		C9847A191C862BA30028303A /* test_verb_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = C9847A181C862BA30028303A /* test_verb_list.csv */; };
 		C9E915B11C830C8900FAECB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915B01C830C8900FAECB1 /* main.m */; };
 		C9E915B41C830C8900FAECB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E915B31C830C8900FAECB1 /* AppDelegate.m */; };
@@ -46,8 +46,8 @@
 /* Begin PBXFileReference section */
 		C9847A0F1C8626840028303A /* VerbListParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbListParserTest.m; sourceTree = "<group>"; };
 		C9847A111C8628200028303A /* verb_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = verb_list.csv; sourceTree = "<group>"; };
-		C9847A131C862A4B0028303A /* VerbListProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbListProvider.h; sourceTree = "<group>"; };
-		C9847A141C862A4B0028303A /* VerbListProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbListProvider.m; sourceTree = "<group>"; };
+		C9847A131C862A4B0028303A /* VerbListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbListParser.h; sourceTree = "<group>"; };
+		C9847A141C862A4B0028303A /* VerbListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbListParser.m; sourceTree = "<group>"; };
 		C9847A181C862BA30028303A /* test_verb_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_verb_list.csv; sourceTree = "<group>"; };
 		C9E915AC1C830C8900FAECB1 /* verbinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = verbinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E915B01C830C8900FAECB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 				C9E915EB1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m */,
 				C9E915ED1C830FB100FAECB1 /* VerbinatorQuestionView.h */,
 				C9E915EE1C83115400FAECB1 /* VerbinatorQuestionGenerator.h */,
-				C9847A131C862A4B0028303A /* VerbListProvider.h */,
-				C9847A141C862A4B0028303A /* VerbListProvider.m */,
+				C9847A131C862A4B0028303A /* VerbListParser.h */,
+				C9847A141C862A4B0028303A /* VerbListParser.m */,
 			);
 			path = verbinator;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 				C9E915B71C830C8900FAECB1 /* VerbinatorQuestionViewController.m in Sources */,
 				C9E915EC1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m in Sources */,
 				C9E915B41C830C8900FAECB1 /* AppDelegate.m in Sources */,
-				C9847A151C862A4B0028303A /* VerbListProvider.m in Sources */,
+				C9847A151C862A4B0028303A /* VerbListParser.m in Sources */,
 				C9E915B11C830C8900FAECB1 /* main.m in Sources */,
 				C9E915E91C830D2500FAECB1 /* VerbinatorQuestion.m in Sources */,
 			);

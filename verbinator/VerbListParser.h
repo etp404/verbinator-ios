@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VerbListProvider : NSObject
+@interface VerbListParser : NSObject
 -(instancetype)initWithFilePath:(NSString*)filePath;
 -(NSArray *)verbs;
 @end
