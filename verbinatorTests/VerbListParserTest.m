@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "VerbListParser.h"
+#import "VerbinatorInfinitiveVerb.h"
 
 @interface VerbListParserTest : XCTestCase
 
@@ -15,7 +16,7 @@
 
 @implementation VerbListParserTest
 
-- (void)testExample {
+- (void)testThatCanReadInVerbsFromFile {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
 
     NSString *verbFilePath =
@@ -23,7 +24,10 @@
     VerbListParser *verbListProvider = [[VerbListParser alloc] initWithFilePath:verbFilePath];
     NSArray *verbs = [verbListProvider verbs];
     XCTAssertEqual(2, [verbs count]);
-    
+    VerbinatorInfinitiveVerb *firstVerb = [verbs objectAtIndex:0];
+    XCTAssertEqualObjects(@"être", firstVerb.frenchVerb);
+    XCTAssertEqualObjects(@"to be", firstVerb.englishVerb);
+    XCTAssertEqualObjects(@"avoir", firstVerb.auxiliaryVerb);
 }
 
 
