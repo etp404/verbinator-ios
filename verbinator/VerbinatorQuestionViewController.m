@@ -7,6 +7,7 @@
 //
 
 #import "VerbinatorQuestionViewController.h"
+#import "VerbinatorQuestionViewModel.h"
 
 @interface VerbinatorQuestionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *questionElement;
@@ -16,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)didReceiveMemoryWarning {

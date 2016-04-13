@@ -106,6 +106,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C922FC411CBED6170076F78F /* fakes */ = {
+			isa = PBXGroup;
+			children = (
+				C9E915E41C830CD200FAECB1 /* FakeQuestionView.h */,
+				C9E915E51C830CD200FAECB1 /* FakeQuestionView.m */,
+				C9E915EF1C83122900FAECB1 /* FakeQuestionGenerator.h */,
+				C9E915F01C83122900FAECB1 /* FakeQuestionGenerator.m */,
+			);
+			name = fakes;
+			sourceTree = "<group>";
+		};
 		C9E915A31C830C8900FAECB1 = {
 			isa = PBXGroup;
 			children = (
@@ -164,13 +175,10 @@
 		C9E915C81C830C8900FAECB1 /* verbinatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				C922FC411CBED6170076F78F /* fakes */,
 				C9847A181C862BA30028303A /* test_verb_list.csv */,
 				C9E915CB1C830C8900FAECB1 /* Info.plist */,
 				C9E915E21C830C9F00FAECB1 /* QuestionViewModelTest.m */,
-				C9E915E41C830CD200FAECB1 /* FakeQuestionView.h */,
-				C9E915E51C830CD200FAECB1 /* FakeQuestionView.m */,
-				C9E915EF1C83122900FAECB1 /* FakeQuestionGenerator.h */,
-				C9E915F01C83122900FAECB1 /* FakeQuestionGenerator.m */,
 				C9E915F71C8338FB00FAECB1 /* VerbinatorQuestionViewControllerTest.m */,
 				C9847A0F1C8626840028303A /* VerbListParserTest.m */,
 			);
