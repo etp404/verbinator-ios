@@ -22,7 +22,7 @@
     return self;
 }
 
--(int)randomNumberFrom:(int)from to:(int)to{
+-(int)randomNumberInclusiveFrom:(int)from exclusiveTo:(int)to{
     return self.number;
 }
 @end

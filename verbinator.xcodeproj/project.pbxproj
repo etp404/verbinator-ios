@@ -10,6 +10,7 @@
 		C90BCC3A1CC272A300C02A1F /* QuestionGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BCC391CC272A300C02A1F /* QuestionGeneratorTest.m */; };
 		C90BCC3D1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BCC3C1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m */; };
 		C9481A171CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = C9481A161CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m */; };
+		C9683AE21CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9683AE11CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m */; };
 		C9847A101C8626840028303A /* VerbListParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A0F1C8626840028303A /* VerbListParserTest.m */; };
 		C9847A121C8628200028303A /* verb_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = C9847A111C8628200028303A /* verb_list.csv */; };
 		C9847A151C862A4B0028303A /* VerbListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A141C862A4B0028303A /* VerbListParser.m */; };
@@ -55,6 +56,8 @@
 		C90BCC3C1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorRandomQuestionGenerator.m; sourceTree = "<group>"; };
 		C9481A151CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturingVerbinatorQuestionGeneratorCallback.h; sourceTree = "<group>"; };
 		C9481A161CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturingVerbinatorQuestionGeneratorCallback.m; sourceTree = "<group>"; };
+		C9683AE01CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorSystemRandomNumberGenerator.h; sourceTree = "<group>"; };
+		C9683AE11CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorSystemRandomNumberGenerator.m; sourceTree = "<group>"; };
 		C9847A0F1C8626840028303A /* VerbListParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbListParserTest.m; sourceTree = "<group>"; };
 		C9847A111C8628200028303A /* verb_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = verb_list.csv; sourceTree = "<group>"; };
 		C9847A131C862A4B0028303A /* VerbListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbListParser.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				C9FB28AE1CC27FB8004AECFD /* RandomNumberGenerator.h */,
 				C9FB28B21CC2971E004AECFD /* VerbinatorMoodAndTense.h */,
 				C9FB28B31CC2971E004AECFD /* VerbinatorMoodAndTense.m */,
+				C9683AE01CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.h */,
+				C9683AE11CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m */,
 			);
 			path = verbinator;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9683AE21CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m in Sources */,
 				C9E915B71C830C8900FAECB1 /* VerbinatorQuestionViewController.m in Sources */,
 				C9E915EC1C830F7A00FAECB1 /* VerbinatorQuestionViewModel.m in Sources */,
 				C9E915B41C830C8900FAECB1 /* AppDelegate.m in Sources */,

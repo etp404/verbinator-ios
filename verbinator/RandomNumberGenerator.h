@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @protocol VerbinatorRandomNumberGenerator
-- (int)randomNumberFrom:(int)from to:(int)to;
+- (int)randomNumberInclusiveFrom:(int)from exclusiveTo:(int)to;
 @end
