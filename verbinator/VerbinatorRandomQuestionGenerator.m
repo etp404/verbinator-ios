@@ -12,7 +12,7 @@
 @property(nonatomic, strong)
     NSObject<VerbinatorRandomNumberGenerator> *randomNumberGenerator;
 @property(nonatomic, strong) NSArray<VerbinatorInfinitiveVerb *> *verbList;
-@property(nonatomic, strong) NSArray<NSString *> *personList;
+@property(nonatomic, strong) NSArray<id<VerbinatorPerson>> *personList;
 @property(nonatomic, strong)
     NSArray<VerbinatorMoodAndTense *> *moodAndTenseList;
 @end
@@ -22,7 +22,7 @@
 initWithRandomNumberGenerator:
     (NSObject<VerbinatorRandomNumberGenerator> *)randomNumberGenerator
                      verbList:(NSArray<VerbinatorInfinitiveVerb *> *)verbList
-                   personList:(NSArray<NSString *> *)personList
+                   personList:(NSArray<id<VerbinatorPerson>> *)personList
                moodsAndTenses:
                    (NSArray<VerbinatorMoodAndTense *> *)moodAndTenseList {
   {

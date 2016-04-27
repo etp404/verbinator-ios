@@ -11,6 +11,7 @@
 #import "VerbinatorInfinitiveVerb.h"
 #import "VerbinatorMoodAndTense.h"
 #import "VerbinatorQuestion.h"
+#import "VerbinatorSecondPersonSingular.h"
 #import <XCTest/XCTest.h>
 
 @interface QuestionGeneratorTest : XCTestCase
@@ -24,7 +25,7 @@
       [[VerbinatorInfinitiveVerb alloc] initWithFrenchVerb:@"someFrenchVerb"
                                                englishVerb:@"someEnglishVerb"
                                              auxiliaryVerb:@"someAuxiliary"];
-  NSString *somePerson = @"person";
+  id<VerbinatorPerson> somePerson = [VerbinatorSecondPersonSingular new];
   VerbinatorMoodAndTense *moodAndTense =
       [[VerbinatorMoodAndTense alloc] initWithMood:@"someMood"
                                           andTense:@"someTense"];
@@ -53,7 +54,8 @@
   [questionGenerator getQuestion:callback];
 
   XCTAssertEqualObjects(callback.question.person, expectedQuestion.person);
-  XCTAssertEqualObjects(callback.question.moodAndTense, expectedQuestion.moodAndTense);
+  XCTAssertEqualObjects(callback.question.moodAndTense,
+                        expectedQuestion.moodAndTense);
   XCTAssertEqualObjects(callback.question.verb, expectedQuestion.verb);
 }
 

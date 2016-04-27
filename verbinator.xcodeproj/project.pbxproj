@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C90BCC3A1CC272A300C02A1F /* QuestionGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BCC391CC272A300C02A1F /* QuestionGeneratorTest.m */; };
 		C90BCC3D1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C90BCC3C1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m */; };
+		C92020871CD1494A0025F4DE /* VerbinatorSecondPersonSingular.m in Sources */ = {isa = PBXBuildFile; fileRef = C92020861CD1494A0025F4DE /* VerbinatorSecondPersonSingular.m */; };
 		C9481A171CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = C9481A161CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m */; };
 		C9683AE21CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9683AE11CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.m */; };
 		C9847A101C8626840028303A /* VerbListParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9847A0F1C8626840028303A /* VerbListParserTest.m */; };
@@ -54,6 +55,9 @@
 		C90BCC391CC272A300C02A1F /* QuestionGeneratorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionGeneratorTest.m; sourceTree = "<group>"; };
 		C90BCC3B1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorRandomQuestionGenerator.h; sourceTree = "<group>"; };
 		C90BCC3C1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorRandomQuestionGenerator.m; sourceTree = "<group>"; };
+		C92020811CD148D70025F4DE /* VerbinatorPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorPerson.h; sourceTree = "<group>"; };
+		C92020851CD1494A0025F4DE /* VerbinatorSecondPersonSingular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorSecondPersonSingular.h; sourceTree = "<group>"; };
+		C92020861CD1494A0025F4DE /* VerbinatorSecondPersonSingular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerbinatorSecondPersonSingular.m; sourceTree = "<group>"; };
 		C9481A151CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturingVerbinatorQuestionGeneratorCallback.h; sourceTree = "<group>"; };
 		C9481A161CC276C800A04D7D /* CapturingVerbinatorQuestionGeneratorCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapturingVerbinatorQuestionGeneratorCallback.m; sourceTree = "<group>"; };
 		C9683AE01CC393DF00DD1E2F /* VerbinatorSystemRandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerbinatorSystemRandomNumberGenerator.h; sourceTree = "<group>"; };
@@ -124,6 +128,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C92020841CD1492A0025F4DE /* persons */ = {
+			isa = PBXGroup;
+			children = (
+				C92020811CD148D70025F4DE /* VerbinatorPerson.h */,
+				C92020851CD1494A0025F4DE /* VerbinatorSecondPersonSingular.h */,
+				C92020861CD1494A0025F4DE /* VerbinatorSecondPersonSingular.m */,
+			);
+			name = persons;
+			sourceTree = "<group>";
+		};
 		C922FC411CBED6170076F78F /* fakes */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +176,7 @@
 		C9E915AE1C830C8900FAECB1 /* verbinator */ = {
 			isa = PBXGroup;
 			children = (
+				C92020841CD1492A0025F4DE /* persons */,
 				C9E915B21C830C8900FAECB1 /* AppDelegate.h */,
 				C9E915B31C830C8900FAECB1 /* AppDelegate.m */,
 				C9E915B51C830C8900FAECB1 /* VerbinatorQuestionViewController.h */,
@@ -363,6 +378,7 @@
 				C9847A151C862A4B0028303A /* VerbListParser.m in Sources */,
 				C9FB28B41CC2971E004AECFD /* VerbinatorMoodAndTense.m in Sources */,
 				C90BCC3D1CC2739500C02A1F /* VerbinatorRandomQuestionGenerator.m in Sources */,
+				C92020871CD1494A0025F4DE /* VerbinatorSecondPersonSingular.m in Sources */,
 				C9E915B11C830C8900FAECB1 /* main.m in Sources */,
 				C9E915E91C830D2500FAECB1 /* VerbinatorQuestion.m in Sources */,
 				C9B29CEC1CBC2DEA0038D45D /* VerbinatorInfinitiveVerb.m in Sources */,
