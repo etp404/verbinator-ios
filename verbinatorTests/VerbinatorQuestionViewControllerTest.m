@@ -17,13 +17,11 @@
 
 - (void)testThatVerbinatorQuestionViewControllerCanShowAQuestion {
     NSString *questionString = @"some question";
-    VerbinatorQuestion *question = [[VerbinatorQuestion alloc] initWithString:questionString];
-    
     
     VerbinatorQuestionViewController *questionViewController = [[VerbinatorQuestionViewController alloc]  init];
 
     [questionViewController view];
-    [questionViewController setQuestion: question];
+    [questionViewController setQuestion: questionString];
 
     NSArray *subviews = [questionViewController.view subviews];
     

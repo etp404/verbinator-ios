@@ -9,7 +9,7 @@
 #import "FakeQuestionView.h"
 
 @implementation FakeQuestionView
--(void)setQuestion:(VerbinatorQuestion *)question {
+-(void)setQuestion:(NSString *)question {
     self.setQuestionCalledWithQuestion = question;
 }
 @end

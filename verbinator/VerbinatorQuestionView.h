@@ -11,6 +11,6 @@
 
 @protocol VerbinatorQuestionView <NSObject>
 
--(void)setQuestion:(VerbinatorQuestion *)question;
+-(void)setQuestion:(NSString *)question;
 
 @end

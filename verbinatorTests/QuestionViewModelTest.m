@@ -8,6 +8,7 @@
 
 #import "FakeQuestionGenerator.h"
 #import "FakeQuestionView.h"
+#import "VerbinatorInfinitiveVerb.h"
 #import "VerbinatorQuestionViewModel.h"
 #import <XCTest/XCTest.h>
 
@@ -18,7 +19,19 @@
 @implementation QuestionViewModelTest
 
 - (void)testViewIsImmediatelyToldToShowAQuestion {
-  VerbinatorQuestion *expectedQuestion = [VerbinatorQuestion new];
+  VerbinatorInfinitiveVerb *someVerb =
+      [[VerbinatorInfinitiveVerb alloc] initWithFrenchVerb:@"french_verb"
+                                               englishVerb:@"english_verb"
+                                             auxiliaryVerb:@"some_auxiliary"];
+  NSString *somePerson = @"some_person";
+  VerbinatorMoodAndTense *someMoodAndTest =
+      [[VerbinatorMoodAndTense alloc] initWithMood:@"some_mood"
+                                          andTense:@"some_tense"];
+
+  VerbinatorQuestion *expectedQuestion =
+      [[VerbinatorQuestion alloc] initWithVerb:someVerb
+                                        person:somePerson
+                                  moodAndTense:someMoodAndTest];
   FakeQuestionGenerator *questionGenerator =
       [[FakeQuestionGenerator alloc] initWithQuestion:expectedQuestion];
 
@@ -28,8 +41,12 @@
   [[VerbinatorQuestionViewModel alloc] initWithQuestionView:fakeQuestionView
                                        andQuestionGenerator:questionGenerator];
 #pragma clang diagnostic pop
-  XCTAssertEqual(fakeQuestionView.setQuestionCalledWithQuestion,
-                 expectedQuestion);
+  NSString *expectedQuestionString = [NSString
+      stringWithFormat:@"What is the '%@ %@' form of %@ (%@) in the %@?",
+                       someMoodAndTest.mood, someMoodAndTest.tense,
+                       someVerb.frenchVerb, someVerb.englishVerb, somePerson];
+  XCTAssertEqualObjects(fakeQuestionView.setQuestionCalledWithQuestion,
+                        expectedQuestionString);
 }
 
 @end

@@ -11,5 +11,5 @@
 #import "VerbinatorQuestionView.h"
 
 @interface FakeQuestionView : NSObject<VerbinatorQuestionView>
-@property VerbinatorQuestion* setQuestionCalledWithQuestion;
+@property NSString* setQuestionCalledWithQuestion;
 @end
