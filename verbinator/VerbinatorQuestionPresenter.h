@@ -11,6 +11,6 @@
 #import "VerbinatorQuestionView.h"
 #import "VerbinatorQuestionGenerator.h"
 
-@interface VerbinatorQuestionViewModel : NSObject
+@interface VerbinatorQuestionPresenter : NSObject
 -(instancetype) initWithQuestionView:(id<VerbinatorQuestionView>)verbinatorQuestionView andQuestionGenerator:(id<VerbinatorQuestionGenerator>)verbinatorQuestionStore;
 @end

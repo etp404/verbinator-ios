@@ -6,19 +6,19 @@
 //  Copyright © 2016 Matthew Mould. All rights reserved.
 //
 
-#import "VerbinatorQuestionViewModel.h"
+#import "VerbinatorQuestionPresenter.h"
 
 NSString *const questionFormat =
     @"What is the '%@ %@' form of %@ (%@) in the %@?";
 
-@interface VerbinatorQuestionViewModelQuestionCallback
+@interface VerbinatorQuestionPresenterQuestionCallback
     : NSObject <VerbinatorQuestionGeneratorCallback>
 @property(nonatomic, strong) id<VerbinatorQuestionView> verbinatorQuestionView;
 - (instancetype)initWithQuestionView:
     (id<VerbinatorQuestionView>)verbinatorQuestionView;
 @end
 
-@implementation VerbinatorQuestionViewModelQuestionCallback
+@implementation VerbinatorQuestionPresenterQuestionCallback
 - (instancetype)initWithQuestionView:
     (id<VerbinatorQuestionView>)verbinatorQuestionView {
   self = [super init];
@@ -37,7 +37,7 @@ NSString *const questionFormat =
 }
 @end
 
-@implementation VerbinatorQuestionViewModel
+@implementation VerbinatorQuestionPresenter
 - (instancetype)
 initWithQuestionView:(id<VerbinatorQuestionView>)verbinatorQuestionView
 andQuestionGenerator:
@@ -45,7 +45,7 @@ andQuestionGenerator:
   self = [super init];
   if (self) {
     [verbinatorQuestionGenerator
-        getQuestion:[[VerbinatorQuestionViewModelQuestionCallback alloc]
+        getQuestion:[[VerbinatorQuestionPresenterQuestionCallback alloc]
                         initWithQuestionView:verbinatorQuestionView]];
   }
   return self;

@@ -10,7 +10,7 @@
 #import "VerbListParser.h"
 #import "VerbinatorInfinitiveVerb.h"
 #import "VerbinatorQuestionViewController.h"
-#import "VerbinatorQuestionViewModel.h"
+#import "VerbinatorQuestionPresenter.h"
 #import "VerbinatorRandomQuestionGenerator.h"
 #import "VerbinatorSecondPersonSingular.h"
 #import "VerbinatorSystemRandomNumberGenerator.h"
@@ -46,7 +46,7 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-value"
-  [[VerbinatorQuestionViewModel alloc]
+  [[VerbinatorQuestionPresenter alloc]
       initWithQuestionView:self
       andQuestionGenerator:randomQuestionGenerator];
 #pragma clang diagnostic pop

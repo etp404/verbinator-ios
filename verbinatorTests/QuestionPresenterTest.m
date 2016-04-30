@@ -10,15 +10,15 @@
 #import "FakeQuestionView.h"
 #import "VerbinatorInfinitiveVerb.h"
 #import "VerbinatorPerson.h"
-#import "VerbinatorQuestionViewModel.h"
+#import "VerbinatorQuestionPresenter.h"
 #import "VerbinatorSecondPersonSingular.h"
 #import <XCTest/XCTest.h>
 
-@interface QuestionViewModelTest : XCTestCase
+@interface QuestionPresenterTest : XCTestCase
 
 @end
 
-@implementation QuestionViewModelTest
+@implementation QuestionPresenterTest
 
 - (void)testViewIsImmediatelyToldToShowAQuestion {
   VerbinatorInfinitiveVerb *someVerb =
@@ -41,7 +41,7 @@
   FakeQuestionView *fakeQuestionView = [FakeQuestionView new];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wunused-value"
-  [[VerbinatorQuestionViewModel alloc] initWithQuestionView:fakeQuestionView
+  [[VerbinatorQuestionPresenter alloc] initWithQuestionView:fakeQuestionView
                                        andQuestionGenerator:questionGenerator];
 #pragma clang diagnostic pop
 
