@@ -37,17 +37,23 @@
       addObject:[[VerbinatorMoodAndTense alloc] initWithMood:@"indicative"
                                                     andTense:@"present"]];
 
-  VerbinatorRandomQuestionGenerator *randomQuestionGenerator =
+  id<VerbinatorQuestionGenerator> randomQuestionGenerator =
       [[VerbinatorRandomQuestionGenerator alloc]
           initWithRandomNumberGenerator:randomNumberGenerator
                                verbList:[verbListProvider verbs]
                              personList:[personList copy]
                          moodsAndTenses:moodAndTenseList];
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-value"
+  [[VerbinatorQuestionViewModel alloc]
+      initWithQuestionView:self
+      andQuestionGenerator:randomQuestionGenerator];
+#pragma clang diagnostic pop
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 - (void)setQuestion:(NSString *)question {

@@ -9,7 +9,9 @@
 #import "FakeQuestionGenerator.h"
 #import "FakeQuestionView.h"
 #import "VerbinatorInfinitiveVerb.h"
+#import "VerbinatorPerson.h"
 #import "VerbinatorQuestionViewModel.h"
+#import "VerbinatorSecondPersonSingular.h"
 #import <XCTest/XCTest.h>
 
 @interface QuestionViewModelTest : XCTestCase
@@ -23,7 +25,8 @@
       [[VerbinatorInfinitiveVerb alloc] initWithFrenchVerb:@"french_verb"
                                                englishVerb:@"english_verb"
                                              auxiliaryVerb:@"some_auxiliary"];
-  NSString *somePerson = @"some_person";
+  VerbinatorSecondPersonSingular *somePerson =
+      [[VerbinatorSecondPersonSingular alloc] init];
   VerbinatorMoodAndTense *someMoodAndTest =
       [[VerbinatorMoodAndTense alloc] initWithMood:@"some_mood"
                                           andTense:@"some_tense"];
@@ -41,10 +44,12 @@
   [[VerbinatorQuestionViewModel alloc] initWithQuestionView:fakeQuestionView
                                        andQuestionGenerator:questionGenerator];
 #pragma clang diagnostic pop
+
   NSString *expectedQuestionString = [NSString
       stringWithFormat:@"What is the '%@ %@' form of %@ (%@) in the %@?",
                        someMoodAndTest.mood, someMoodAndTest.tense,
-                       someVerb.frenchVerb, someVerb.englishVerb, somePerson];
+                       someVerb.frenchVerb, someVerb.englishVerb,
+                       [somePerson getFrenchForm]];
   XCTAssertEqualObjects(fakeQuestionView.setQuestionCalledWithQuestion,
                         expectedQuestionString);
 }

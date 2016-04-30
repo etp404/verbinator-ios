@@ -21,7 +21,7 @@
     return self;
 }
 
--(VerbinatorQuestion *)getQuestion{
-    return self.question;
+-(void)getQuestion:(id<VerbinatorQuestionGeneratorCallback>)callback;{
+    [callback questionProvided:self.question];
 }
 @end

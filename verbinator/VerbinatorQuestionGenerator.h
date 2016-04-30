@@ -6,9 +6,13 @@
 //  Copyright © 2016 Matthew Mould. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "VerbinatorQuestion.h"
+#import <Foundation/Foundation.h>
+
+@protocol VerbinatorQuestionGeneratorCallback
+- (void)questionProvided:(VerbinatorQuestion *)question;
+@end
 
 @protocol VerbinatorQuestionGenerator <NSObject>
--(VerbinatorQuestion *)getQuestion;
+- (void)getQuestion:(id<VerbinatorQuestionGeneratorCallback>)callback;
 @end

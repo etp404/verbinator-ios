@@ -9,12 +9,9 @@
 #import "RandomNumberGenerator.h"
 #import "VerbinatorQuestion.h"
 #import <Foundation/Foundation.h>
+#import "VerbinatorQuestionGenerator.h"
 
-@protocol VerbinatorQuestionGeneratorCallback
-- (void)questionProvided:(VerbinatorQuestion *)question;
-@end
-
-@interface VerbinatorRandomQuestionGenerator : NSObject
+@interface VerbinatorRandomQuestionGenerator : NSObject<VerbinatorQuestionGenerator>
 - (instancetype)initWithRandomNumberGenerator:
                     (NSObject<VerbinatorRandomNumberGenerator> *)randomNumberGenerator
                                      verbList:(NSArray<VerbinatorInfinitiveVerb *> *)verbList
