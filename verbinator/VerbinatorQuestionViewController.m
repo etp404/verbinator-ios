@@ -26,15 +26,23 @@
       [VerbinatorSystemRandomNumberGenerator new];
 
   VerbListParser *verbListProvider = [self createVerbListParser];
+
   NSMutableArray<VerbinatorPerson> *personList =
       [[NSMutableArray<VerbinatorPerson> alloc] init];
   [personList addObject:[[VerbinatorSecondPersonSingular alloc] init]];
+
+  NSMutableArray<VerbinatorMoodAndTense *> *moodAndTenseList =
+      [[NSMutableArray<VerbinatorMoodAndTense *> alloc] init];
+  [moodAndTenseList
+      addObject:[[VerbinatorMoodAndTense alloc] initWithMood:@"indicative"
+                                                    andTense:@"present"]];
+
   VerbinatorRandomQuestionGenerator *randomQuestionGenerator =
       [[VerbinatorRandomQuestionGenerator alloc]
           initWithRandomNumberGenerator:randomNumberGenerator
                                verbList:[verbListProvider verbs]
                              personList:[personList copy]
-                         moodsAndTenses:nil];
+                         moodsAndTenses:moodAndTenseList];
 }
 
 - (void)didReceiveMemoryWarning {
