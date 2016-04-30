@@ -12,8 +12,8 @@
 #import "VerbinatorQuestionViewController.h"
 #import "VerbinatorQuestionViewModel.h"
 #import "VerbinatorRandomQuestionGenerator.h"
+#import "VerbinatorSecondPersonSingular.h"
 #import "VerbinatorSystemRandomNumberGenerator.h"
-
 @interface VerbinatorQuestionViewController ()
 @property(weak, nonatomic) IBOutlet UILabel *questionElement;
 @end
@@ -24,14 +24,16 @@
   [super viewDidLoad];
   NSObject<VerbinatorRandomNumberGenerator> *randomNumberGenerator =
       [VerbinatorSystemRandomNumberGenerator new];
-  
-  VerbListParser *verbListProvider = [self createVerbListParser];
 
+  VerbListParser *verbListProvider = [self createVerbListParser];
+  NSMutableArray<VerbinatorPerson> *personList =
+      [[NSMutableArray<VerbinatorPerson> alloc] init];
+  [personList addObject:[[VerbinatorSecondPersonSingular alloc] init]];
   VerbinatorRandomQuestionGenerator *randomQuestionGenerator =
       [[VerbinatorRandomQuestionGenerator alloc]
           initWithRandomNumberGenerator:randomNumberGenerator
                                verbList:[verbListProvider verbs]
-                             personList:nil
+                             personList:[personList copy]
                          moodsAndTenses:nil];
 }
 
@@ -44,12 +46,12 @@
   [self.questionElement setText:question];
 }
 
--(VerbListParser *)createVerbListParser{
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSString *verbFilePath = [NSString
-                              stringWithFormat:@"%@/%@", [bundle bundlePath], @"verb_list.csv"];
-    
-    return [[VerbListParser alloc] initWithFilePath:verbFilePath];
+- (VerbListParser *)createVerbListParser {
+  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+  NSString *verbFilePath = [NSString
+      stringWithFormat:@"%@/%@", [bundle bundlePath], @"verb_list.csv"];
+
+  return [[VerbListParser alloc] initWithFilePath:verbFilePath];
 }
 
 @end
